@@ -5,7 +5,7 @@ let mode = process.env.NODE_ENV === 'production'
     : 'development';
 
 module.exports = {
-    entry: './src/index.js',
+    entry: './src/index.ts',
     output: {
         path: path.resolve(__dirname, 'dist'),
         clean: true, // Очищает директорию dist перед обновлением бандла
@@ -15,5 +15,16 @@ module.exports = {
         hot: true, // Включает автоматическую перезагрузку страницы при изменениях
     },
     mode,
-
+    module: {
+        rules: [
+            {
+                test: /\.tsx?$/,
+                use: 'ts-loader',
+                exclude: /node_modules/,
+            },
+        ],
+    },
+    resolve: {
+        extensions: ['.tsx', '.ts', '.js'],
+    },
 }
