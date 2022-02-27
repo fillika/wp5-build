@@ -21,8 +21,7 @@
   "homepage": "https://github.com/fillika/wp5-build#readme",
   "browserslist": [
     "> 0.5%",
-    "not dead",
-    "IE 11"
+    "not dead"
   ],
   "devDependencies": {
     "@babel/core": "^7.17.5",
