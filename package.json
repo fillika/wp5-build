@@ -21,7 +21,8 @@
   "homepage": "https://github.com/fillika/wp5-build#readme",
   "browserslist": [
     "> 0.5%",
-    "not dead"
+    "not dead",
+    "IE 11"
   ],
   "devDependencies": {
     "@babel/core": "^7.17.5",
@@ -30,10 +31,17 @@
     "@types/react": "^17.0.39",
     "@types/react-dom": "^17.0.11",
     "babel-loader": "^8.2.3",
+    "css-loader": "^6.6.0",
     "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.5.3",
+    "node-sass": "^7.0.1",
+    "postcss": "^8.4.7",
+    "postcss-loader": "^6.2.1",
+    "postcss-preset-env": "^7.4.1",
     "prettier": "2.5.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "sass-loader": "^12.6.0",
     "ts-loader": "^9.2.6",
     "typescript": "^4.5.5",
     "webpack": "^5.69.1",
