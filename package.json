@@ -24,9 +24,12 @@
     "not dead"
   ],
   "devDependencies": {
+    "@babel/core": "^7.17.5",
+    "@babel/preset-env": "^7.16.11",
     "@babel/preset-typescript": "^7.16.7",
     "@types/react": "^17.0.39",
     "@types/react-dom": "^17.0.11",
+    "babel-loader": "^8.2.3",
     "html-webpack-plugin": "^5.5.0",
     "prettier": "2.5.1",
     "react": "^17.0.2",
