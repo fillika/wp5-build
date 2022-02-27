@@ -1,11 +1,12 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 let mode = process.env.NODE_ENV === 'production'
     ? 'production'
     : 'development';
 
 module.exports = {
-    entry: './src/index.ts',
+    entry: path.resolve(__dirname, 'src', 'index.tsx'),
     output: {
         path: path.resolve(__dirname, 'dist'),
         clean: true, // Очищает директорию dist перед обновлением бандла
@@ -15,6 +16,9 @@ module.exports = {
         hot: true, // Включает автоматическую перезагрузку страницы при изменениях
     },
     mode,
+    resolve: {
+        extensions: ['.tsx', '.ts', '.js'],
+    },
     module: {
         rules: [
             {
@@ -24,7 +28,9 @@ module.exports = {
             },
         ],
     },
-    resolve: {
-        extensions: ['.tsx', '.ts', '.js'],
-    },
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: path.resolve(__dirname, 'src', 'index.html')
+        })
+    ],
 }
