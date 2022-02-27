@@ -12,7 +12,10 @@ module.exports = {
     },
     devtool: 'source-map',
     devServer: {
-        hot: true, // Включает автоматическую перезагрузку страницы при изменениях
+        open: true,
+        compress: true,
+        hot: true,
+        port: 8080,
     },
     mode,
     resolve: {
